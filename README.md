@@ -88,7 +88,7 @@ src/
 
 ---
 
-## 📸 Screenshots (Optional)
+## 📸 Screenshots
 <img width="956" height="473" alt="employee_add" src="https://github.com/user-attachments/assets/dab9060f-2bdb-42f3-bf0b-baad0a82a2be" />
 
 <img width="912" height="441" alt="employee_eddit" src="https://github.com/user-attachments/assets/191ca59f-6b5a-4df4-98e8-5468252421cb" />
@@ -98,4 +98,3 @@ src/
 ## 🧑‍💻 Author
 
 - **Dulaj Ranasinghe**
-- [YouTube Channel: Dulaj TV](https://www.youtube.com/@DulajTV)
