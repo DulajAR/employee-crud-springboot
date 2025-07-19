@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Register</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 10px; }
+        form { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<h1>Employee Register</h1>
+
+<form th:action="@{/add}" method="post" th:object="${employee}">
+    Name: <input type="text" th:field="*{name}" required />
+    Email: <input type="email" th:field="*{email}" required />
+    Department: <input type="text" th:field="*{department}" required />
+    <button type="submit">Add Employee</button>
+</form>
+
+<table>
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        <tr th:each="emp : ${employees}">
+            <td th:text="${emp.id}"></td>
+            <td th:text="${emp.name}"></td>
+            <td th:text="${emp.email}"></td>
+            <td th:text="${emp.department}"></td>
+            <td>
+                <a th:href="@{'/edit/' + ${emp.id}}">Edit</a> |
+                <a th:href="@{'/delete/' + ${emp.id}}">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
